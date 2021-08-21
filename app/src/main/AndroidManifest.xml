@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.stockbit.hiring.MainActivity"></activity>
+        <activity android:name="com.stockbit.hiring.MainActivity"
+            android:theme="@style/AppThemeNoActionBar"></activity>
     </application>
 
 </manifest>
