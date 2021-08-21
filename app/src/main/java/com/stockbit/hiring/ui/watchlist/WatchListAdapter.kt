@@ -16,8 +16,17 @@ class WatchListAdapter(val items : ArrayList<CryptoModel>) : RecyclerView.Adapte
             binding.tvName.text = model.name
             binding.tvFullname.text = model.fullName
             binding.tvPrice.text = NumberFormat.formatPrice(model.currentPrice)
-            val changePrice = NumberFormat.formatPriceChanges(model.changePrice)
-            val precentage = NumberFormat.formatPriceChanges(model.changePricePercent)
+            var changePrice = NumberFormat.formatPriceChanges(model.changePrice)
+            var precentage = NumberFormat.formatPriceChanges(model.changePricePercent)
+
+            if (precentage.get(0).toString() == "-"){
+                binding.tvPriceChange.setTextColor(binding.root.context.getColor(android.R.color.holo_red_light))
+            }else{
+                binding.tvPriceChange.setTextColor(binding.root.context.getColor(R.color.colorAccent))
+                precentage = "+$precentage"
+                changePrice = "+$changePrice"
+
+            }
             binding.tvPriceChange.text = "$changePrice ($precentage%)"
         }
 
@@ -31,5 +40,7 @@ class WatchListAdapter(val items : ArrayList<CryptoModel>) : RecyclerView.Adapte
         holder.onBind(items.get(position))
     }
 
-    override fun getItemCount(): Int = items.size
+    override fun getItemCount(): Int {
+        return items.size
+    }
 }

@@ -29,7 +29,10 @@ class WatchlistFragment : Fragment() {
 
         binding.rvWatchlist.layoutManager = LinearLayoutManager(context)
         viewModel.crypto.observe(viewLifecycleOwner, {
-            binding.rvWatchlist.adapter = WatchListAdapter(it)
+            it?.let {
+                binding.pbWatchlist.visibility = View.GONE
+                binding.rvWatchlist.adapter = WatchListAdapter(it)
+            }
         })
 
         return binding.root

@@ -14,13 +14,13 @@ class WatchlistViewModel(val cryptoRepository: CryptoRepository) : BaseViewModel
 
     private val _crpto = MutableLiveData<ArrayList<CryptoModel>>()
     val crypto : LiveData<ArrayList<CryptoModel>> = _crpto
+
     fun load(){
         viewModelScope.launch {
             val result = cryptoRepository.getResponse()
             result.collect {
-                Log.d("yy", "load: ${it.data!!.get(0).coinInfo}")
                 val items : ArrayList<CryptoModel> = ArrayList()
-                it.data!!.map {
+                it.data?.map {
                     items.add(
                         CryptoModel(
                             it.coinInfo.name,
@@ -31,7 +31,6 @@ class WatchlistViewModel(val cryptoRepository: CryptoRepository) : BaseViewModel
                         )
                     )
                 }
-
                 _crpto.postValue(items)
             }
         }

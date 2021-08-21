@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/D:/AppData/Local/Android/Sdk/icons/material/materialicons/sticky_note_2/baseline_sticky_note_2_24.xml" />
+                                      <entry key="url" value="file:/D:/AppData/Local/Android/Sdk/icons/material/materialicons/pie_chart_outline/baseline_pie_chart_outline_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_stockbit" />
+                            <entry key="outputName" value="ic_portfolio" />
                             <entry key="sourceFile" value="D:\Downloads\stockbit.svg" />
                           </map>
                         </option>

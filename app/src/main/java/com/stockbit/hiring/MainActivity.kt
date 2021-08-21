@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun configureNavController() {
         navController = findNavController(com.stockbit.hiring.R.id.nav_host_fragment)
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_watchlist, R.id.navigation_stream))
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_watchlist, R.id.navigation_stream, R.id.navigation_search, R.id.navigation_chat, R.id.navigation_portfolio))
         binding.navView.setupWithNavController(navController)
     }
 }

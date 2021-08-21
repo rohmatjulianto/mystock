@@ -11,4 +11,18 @@
         android:icon="@drawable/ic_stream"
         android:title="@string/stream" />
 
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search" />
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat" />
+    <item
+        android:id="@+id/navigation_portfolio"
+        android:icon="@drawable/ic_portfolio"
+        android:title="@string/portfolio" />
+
 </menu>

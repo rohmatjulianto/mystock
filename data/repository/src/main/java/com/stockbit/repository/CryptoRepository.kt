@@ -17,7 +17,7 @@ class CryptoRepositoryImpl(private val dataSource: CryptoDataSource) : CryptoRep
             while(true) {
                 val result = dataSource.getResponse()
                 emit(result)
-                delay(3000L)
+                delay(8000L)
             }
         }
     }

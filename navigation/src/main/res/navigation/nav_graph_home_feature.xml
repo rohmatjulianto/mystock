@@ -15,4 +15,17 @@
         android:id="@+id/navigation_stream"
         android:name="com.stockbit.hiring.ui.stream.StreamFragment"
         android:label="@string/stream" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.stockbit.hiring.ui.stream.StreamFragment"
+        android:label="@string/search" />
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.stockbit.hiring.ui.stream.StreamFragment"
+        android:label="@string/chat" />
+    <fragment
+        android:id="@+id/navigation_portfolio"
+        android:name="com.stockbit.hiring.ui.stream.StreamFragment"
+        android:label="@string/portfolio" />
 </navigation>
